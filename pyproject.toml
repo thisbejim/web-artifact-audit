@@ -1,0 +1,30 @@
+[build-system]
+requires = []
+build-backend = "build_backend"
+backend-path = ["."]
+
+[project]
+name = "web-artifact-audit"
+version = "0.1.0"
+description = "Offline preflight checks for static web build artifacts"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { file = "LICENSE" }
+authors = [{ name = "James" }]
+keywords = ["static-site", "web", "assets", "ci", "preflight"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Topic :: Software Development :: Quality Assurance",
+]
+
+[project.scripts]
+web-artifact-audit = "web_artifact_audit.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
